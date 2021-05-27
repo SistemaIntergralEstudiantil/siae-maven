@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7/04/2021, 08:29:13 PM
+    Author     : danielhernandezreyes
+*/
+
+:root {
+    --color-base: #156590;
+    --color-hover: #1565C0;
+    --color-border: #DDDDDD;
+    --color-description: #00A3AA;
+    --color-title-table: #0A1172;
+    --color-disable: #DE2626;
+    --color-d-hover:#F52727;
+    --size-description: 1.5rem;
+    --size-content-table: 1rem;
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf) format('ttf');
+}
+
+* {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.marca-areas {
+    background-image: url(/SIAE/resource/images/menuAreas.png);
+    background-size: 100% 100%;
+}
+.marca-servicio {
+    background-image: url(/SIAE/resource/images/ServSpsi.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.content-G {
+    display: flex;
+    justify-content: center;
+    
+    background: var(--color-base);
+    margin: 0;
+}
+
+.content-item-G {
+    display: block;
+    color: #fff;
+    padding-top: var(--height-item);
+    padding-bottom: var(--height-item);
+    padding-left: var(--width-item);
+    padding-right: var(--width-item);
+    
+    text-align: center;
+    font-size: 1.2rem;
+}
+.content-item-G:hover {
+    background: var(--color-hover);
+}
+
+.content-table {
+  padding: var(--size-content-table);
+  width: calc(100% - calc( var(--size-content-table) * 5 ));
+  margin-top: 1rem;
+  margin-left: 1rem;
+  min-height: 10rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 2px solid var(--color-border);
+  text-align: center;
+  padding: .2em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-border);
+}
+
+.list-none {
+    list-style: none;
+}
+
+.item-G-A-Selec {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content-a {
+    font-size: 1.1em;
+    color: #fff;
+    background-color: var(--color-base);
+    
+    margin: 2rem 30%;
+    padding: 1em 2.5em 1em 2.5em;
+}
+.content-a:hover{
+    background: var(--color-hover);
+}
+
+
+.description-p {
+    font-size: var(--size-description);
+    font-weight: bold;
+    color: var(--color-description);
+    text-align: center;
+    margin: 1rem;
+}
+
+.description-tile {
+    font-size: var(--size-description);
+    font-weight: bold;
+    color: var(--color-title-table);
+    text-align: center;
+    margin: 1rem;
+}
