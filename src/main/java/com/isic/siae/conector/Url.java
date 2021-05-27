@@ -5,6 +5,8 @@
  */
 package com.isic.siae.conector;
 
+import java.nio.charset.Charset;
+
 /**
  * Esta clase representa las direcciones de los JSP.
  * @version 09/05/2021C
@@ -103,7 +105,7 @@ public class Url {
     public static String CSS_CONTROL = URL_RESOURSE_CSS + "Style-Control.css";
     public static String CSS_CURRICULA = URL_RESOURSE_CSS + "Style-Curricula.css";
     public static String CSS_D_CURSOS = URL_RESOURSE_CSS + "Style--D-Cursos.css";
-    public static String CSS_Error = URL_RESOURSE_CSS + "Style-Error.css";
+    public static String CSS_ERROR = URL_RESOURSE_CSS + "Style-Error.css";
     public static String CSS_GENERAL = URL_RESOURSE_CSS + "Style-General.css";
     public static String CSS_HOME = URL_RESOURSE_CSS + "Style-Home.css";
     public static String CSS_INICIO = URL_RESOURSE_CSS + "Style-Inicio.css";
@@ -114,7 +116,7 @@ public class Url {
     /**
      * Dirección de IMG.
      */
-    public static final String URL_RESOURSE_IMG = URL_BASE + "resource/imagenes/";
+    public static final String URL_RESOURSE_IMG = URL_BASE + "resource/images/";
     public static String IMG_ISIC_CIRCULO = URL_RESOURSE_IMG + "ISIC-Circulo.png";
     public static String IMG_LOGIN = URL_RESOURSE_IMG + "Login.png";
     public static String IMG_LOGO_TECNM = URL_RESOURSE_IMG + "Logo-TecNM.png";
@@ -145,4 +147,11 @@ public class Url {
      * Dirección de PDF.
      */
     public static final String URL_RESOURSE_PDF = URL_BASE + "resource/pdf/";
+    /**
+     * Descripción del sitio.
+     */
+    public static final String DESCRIPTION = 
+            new String("SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"
+                    .getBytes(Charset.forName("ISO-8859-1"))
+            );
 }

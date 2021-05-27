@@ -63,7 +63,7 @@ public class Login extends HttpServlet {
                     break;
                 case "exit":
                     cerrarSesion(request);
-                    request.getRequestDispatcher("Login.jsp").forward(request, response);
+                    request.getRequestDispatcher(Url.URL_LOGIN).forward(request, response);
                     break;
             }
         } catch (SQLException ex) {
