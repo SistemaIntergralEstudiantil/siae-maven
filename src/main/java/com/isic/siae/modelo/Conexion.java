@@ -29,9 +29,9 @@ public class Conexion {
      * Este es el constructor de la ConexionBD que iniciara con la conexion a la BD.
      */
     public Conexion(){
-        user = "ISIC_IS";
-        pass = "1S_5%g4&21";
-        direccion="jdbc:mysql://localhost:3306/SIAE?serverTimezone=UTC";//configurar la zona horaria
+        user = "b0f7bb3322ff51";
+        pass = "3c313618";
+        direccion="jdbc:mysql://us-cdbr-east-03.cleardb.com:3306/heroku_41e1a77e5a7fbc2?reconnect=true?serverTimezone=UTC";//configurar la zona horaria
     }
     /**
      * Este método crea la conexion con la BD.
