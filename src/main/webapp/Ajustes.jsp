@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_AJUSTES%>"/>
     </head>
-    <body style="background-image: url(/SIAE/resource/images/menuPrincipal.png);background-size: 100% 130%;background-repeat: no-repeat">
+    <body style="background-image: url(<%=Url.IMG_MENU_PRINCIPAL%>);background-size: 100% 130%;background-repeat: no-repeat">
         <%  HttpSession sesion = request.getSession();
             Session sec = (Session) sesion.getAttribute("user");
             Usuarios user = null;
@@ -36,7 +36,7 @@
         <nav>
         <ul class="content-G content">
             <li><h1 class="content-item-G content-item" >Configuración del perfil del usuario: <%=(user!=null)?user.getIdUsuario():"" %></h1></li>                    
-            <li><img class="content-item-G content-item content-img" src="/SIAE/resource/images/logo_SIAE.png" width="80" height="80" alt="alt"/></li>
+            <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80" alt="alt"/></li>
         </ul>
         </nav>
         </header>
@@ -45,11 +45,11 @@
                 <% if(user != null) { 
                     if(user.aFoto != null) { %>
                 <img src="data:image/png;base64,<%= Base64.getEncoder().encodeToString(user.aFoto)%>" id="foto"/>
-                <% } else { %><img src="/SIAE/resource/images/ISIC-Circulo.png" id="foto"/><% } }%>
+                <% } else { %><img src="<%=Url.IMG_ISIC_CIRCULO%>" id="foto"/><% } }%>
                 <input name="foto" type="file" id="file" /><label for ="file" id="subirFoto">Seleccionar foto de perfil</label>
             </div>
             <abbr title="Seleccione el ícono del avatar para modificar su foto de perfil y proporcionar su contraseña actual">
-                <img src="/SIAE/resource/images/help.png" width="40" height="40" style="float: right"/></abbr>
+                <img src="<%=Url.IMG_ICON_HELP%>" width="40" height="40" style="float: right"/></abbr>
             <dl class="content-data">
             <div class="content-data_row" >
                 <dt class="data_dt data_d" >Confirmar contraseña:</dt>

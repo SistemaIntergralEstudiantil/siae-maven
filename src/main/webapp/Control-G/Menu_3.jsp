@@ -34,7 +34,7 @@
     <ul class="content-G content">
         <li><a class="content-item-G content-item selec-none " href="#dia"></a></li>
         <li><a class="content-item-G content-item selec-none info" href="#dia">Control carga Academica</a></li>
-        <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+        <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
     </ul>
     </nav>
     </header>

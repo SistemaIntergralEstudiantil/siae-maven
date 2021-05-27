@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_LOGIN%>"/>
     </head>
-    <body style="background-image: url(resource/images/Login.png);background-size: 100% 150%;">
+    <body style="background-image: url(<%=Url.IMG_LOGIN%>);background-size: 100% 150%;">
         <table width="100%">
             <tr>
                 <td align="center" width="33%"><img src="<%=Url.IMG_LOGO_TECNM%>" height="80" width="180"></td>

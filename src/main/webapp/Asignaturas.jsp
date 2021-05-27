@@ -59,13 +59,13 @@
                 <option value="AL">Todas</option>
             </select>
             </li>
-            <li><h1 class="content-item-G content-item" >Oferta curricular</h1></li>                    
-            <li><img class="content-item-G content-item content-img" src="/SIAE/resource/images/logo_SIAE.png" width="80" height="80" alt="alt"/></li>
+            <li><h1 class="content-item-G content-item" >Oferta curricular</h1></li> 
+            <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80" alt="alt"/></li>
         </ul>
         </nav>
         </header>
         <abbr title="Seleccione el menú desplegable para filtrar las asignaturas por semestre ">
-            <img src="/SIAE/resource/images/help.png" width="40" height="40" style="float: right"/>  
+            <img src="<%=Url.IMG_ICON_HELP%>" width="40" height="40" style="float: right"/>  
         </abbr>
         <div class="content-table" >
             <table class="table" >
@@ -104,7 +104,7 @@
                 </table>
         </div>
         <div class="content-data_row" >
-            <a class="item-G-A-Selec content-a" href="session/Home.jsp" >Menú principal</a>
+            <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>" >Menú principal</a>
         </div>
         <script src="/SIAE/resource/js/Script-Asignaturas.js"></script>
     </body>

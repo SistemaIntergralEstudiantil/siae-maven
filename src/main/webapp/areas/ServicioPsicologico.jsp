@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_SERVICIO_PSI%>"/>
     </head>
-    <body class="marca-servicio">
+    <body style="background-image: url(<%=Url.IMG_SERV_SPSI%>);background-size: 100% 140%;background-position: 0% -80%;background-repeat: no-repeat">
         <%  HttpSession sesion = request.getSession();
             Session sec = (Session) sesion.getAttribute("user");
             Usuarios user = null;
@@ -36,7 +36,7 @@
             <nav>   
                 <ul class="content-G content">
                     <li><h1 class="content-item-G content-item" >Servicio psicólogico estudiantil</h1></li>
-                    <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+                    <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
                 </ul>
             </nav>
         </header>   

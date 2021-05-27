@@ -64,13 +64,13 @@
                     </li>
                     <li><h1 class="content-item" >Áreas de conocimiento curricular</h1></li>                    
                     <li>
-                        <img class="content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80" alt="alt"/>
+                        <img class="content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80" alt="alt"/>
                     </li>
                 </ul>
             </nav>
         </header>
         <abbr title="Seleccione el menú desplegable para filtrar las asignaturas por área de conocimiento ">
-            <img src="/siae/resource/images/help.png" width="40" height="40" style="float: right"/>  
+            <img src="<%=Url.IMG_ICON_HELP%>" width="40" height="40" style="float: right"/>  
         </abbr>
         <div class="description-p"><p>Aquí tendrás la oportunidad ...</p></div>
         <div class="content-table" >
@@ -95,7 +95,7 @@
                             <th><%=a.getSemestre() %></th>
                             <th><%=a.getNombre() %></th>
                             <th><%=a.getCredito() %></th>
-                            <th><a href="/siae/resource/pdf/<%=a.getIdAsignatura() %>.pdf" target="_blank">PDF</a></th>
+                            <th><a href="<%=Url.URL_RESOURSE_PDF + a.getIdAsignatura() %>.pdf" target="_blank">PDF</a></th>
                         </tr>
                         <%
                                 }

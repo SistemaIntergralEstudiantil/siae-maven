@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_CURRICULA%>"/>
         
     </head>
-    <body style="background-image: url(/siae/resource/images/menuPrincipal.png);background-size: 100% 150%;background-repeat: no-repeat">
+    <body style="background-image: url(<%=Url.IMG_MENU_PRINCIPAL%>);background-size: 100% 150%;background-repeat: no-repeat">
         <%
             
             HttpSession sesion = request.getSession();
@@ -37,12 +37,12 @@
                 <ul class="content-G content">
                     <li><h1 class="content-item-G content-item" >Seguimiento Académico</h1></li>                    
                     <li>
-                        <img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/>
+                        <img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/>
                     </li>
                 </ul>
             </nav>
         </header>
-        <form action="/siae/AsignaturaServ" method="POST" >
+        <form action="AsignaturaServ" method="POST" >
             <div class="content-data_row" >
                 <select name="servicio" class="data_d">
                     <option value="" disabled selected>Seleccionar ...</option>
@@ -55,11 +55,11 @@
                 <input class="data_d input-submit" type="submit" value="Consultar">
             </div>
             <div class="content-data_row" >
-                <a class="item-G-A-Selec content-a" href="/siae/session/Home.jsp">Ménu principal</a>
+                <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>">Ménu principal</a>
             </div>
         </form>
         <abbr title="Seleccione el menú desplegable para realizar una busqueda acerca de tu seguimiento académico ">
-            <img src="/siae/resource/images/help.png" width="40" height="40" style="float: right;"/>  
+            <img src="<%=Url.IMG_ICON_HELP%>" width="40" height="40" style="float: right;"/>  
         </abbr>
     </body>
 </html>

@@ -35,7 +35,7 @@
         <% String res = (String)request.getAttribute("responsable"); String responsable = new String(res.getBytes("ISO-8859-1")); %>
         <li><a class="content-item-G content-item selec-none info" href="#dia">Clases de: <%=(responsable==null)?"":responsable %> <br>correspondientes a la materia <%=(asignatura==null)?"":asignatura %></a></li>
         <li><a class="content-item-G content-item selec-none" href="#dia">Control Sesiones</a></li>
-        <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+        <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
     </ul>
     </nav>
     </header>
@@ -95,7 +95,7 @@
         <footer class="footer">
         <nav>
             <ul class="content-footer">
-                <li><a class="item-footer" href="/siae/Control?clave=course">Menu cursos</a></li>
+                <li><a class="item-footer" href="Control?clave=course">Menu cursos</a></li>
                 <li><%String mensaje = (String) request.getAttribute("msj");%>
                     <label class="item-mensaje"><%=(mensaje==null)?"-":mensaje %></label>
                 </li>

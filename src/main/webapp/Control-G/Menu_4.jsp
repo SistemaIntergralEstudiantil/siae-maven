@@ -4,6 +4,7 @@
     Author     : danielhernandezreyes
 --%>
 
+<%@page import="java.nio.charset.Charset"%>
 <%@page import="com.isic.siae.conector.Url"%>
 <%@page import="com.isic.siae.modelo.beans.Asignatura"%>
 <%@page import="com.isic.siae.modelo.Session"%>
@@ -31,7 +32,7 @@
     <nav>
     <ul class="content-G content">
         <li><a class="content-item-G content-item selec-none info" href="#dia">Solicitudes de verano</a></li>
-        <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+        <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
     </ul>
     </nav>
     </header>
@@ -62,6 +63,6 @@
     </table>
     </div>
     <div class="content-data_row" >
-        <a class="item-G-A-Selec content-a" href="/siae/ControlAltaBaja?clave=consulta">Ménu carga academica</a></div>
+        <a class="item-G-A-Selec content-a" href="ControlAltaBaja?clave=consulta">Ménu carga academica</a></div>
     </body>
 </html>

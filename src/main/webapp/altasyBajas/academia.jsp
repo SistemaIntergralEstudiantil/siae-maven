@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_ACADEMIA%>"/>
     </head>
-    <body style="background-image: url(/siae/resource/images/Login.png);background-size: 100% 100%;">
+    <body style="background-image: url(<%=Url.IMG_LOGIN%>);background-size: 100% 100%;">
     <%  HttpSession sesion = request.getSession();
         Session sec = (Session) sesion.getAttribute("user");
         if(sec == null){
@@ -34,7 +34,7 @@
     <nav>
     <ul class="content-G content">
         <li><h1 class="content-item-G content-item" >Seguimiento académico</h1></li>
-        <li><img class="content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80" alt="alt"/></li>
+        <li><img class="content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80" alt="alt"/></li>
     </ul>
     </nav>
     </header>

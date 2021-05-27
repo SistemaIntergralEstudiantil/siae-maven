@@ -34,7 +34,7 @@
         <nav>
         <ul class="content-G content">
             <li><h1 class="content-item-G content-item" >Módulo de asesorías académicas</h1></li>                    
-            <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+            <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
         </ul>
         </nav>
         </header>

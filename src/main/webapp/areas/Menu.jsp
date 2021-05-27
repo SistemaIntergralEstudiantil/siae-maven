@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_AREAS_APOYO%>"/>
     </head>
-    <body class="marca-areas">
+    <body style="background-image: url(<%=Url.IMG_MENU_AREAS%>);background-size: 80% 100%;background-position: 60% -100%">
         <%  HttpSession sesion = request.getSession();
             Session sec = (Session) sesion.getAttribute("user");
             if (sec == null) {
@@ -31,14 +31,14 @@
         <nav>
         <ul class="content-G content">
             <li><h1 class="content-item-G content-item" >Areas de apoyo escolar</h1></li>                    
-            <li><img class="content-item-G content-item content-img" src="/siae/resource/images/logo_SIAE.png" width="80" height="80" /></li>
+            <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80" /></li>
         </ul>
         </nav>
         </header>
         <div class="description-p" style="margin-top: 4rem">
             <p>Las áreas de apoyo buscan fortalecer los procesos de formación de los estudiantes vulnerables a través de la implementación de un programa.</p>
         </div>
-        <form action="/siae/Asesorias" method="POST" >
+        <form action="/Asesorias" method="POST" >
         <div class="content-data_row" >
             <select name="servicio" class="data_d">
                 <option value="" disabled selected>Áreas</option>
