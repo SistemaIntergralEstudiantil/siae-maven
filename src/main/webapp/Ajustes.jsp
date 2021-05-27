@@ -91,10 +91,10 @@
         </dl>
         <input type="hidden" name="clave" value="change-pass"/>
         </form>
-        <a class="item-G-A-Selec content-a" href="session/Home.jsp">Menú principal</a>
-        <script src="/SIAE/resource/js/Script-ProfilePic.js"></script>
-        <script src="/SIAE/resource/js/Script-Ajustes.js"></script>
-        <script src="/SIAE/resource/js/Script-pass.js"></script>
+        <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>">Menú principal</a>
+        <script src="<%=Url.JS_PROCFILE%>"></script>
+        <script src="<%=Url.JS_AJUSTES%>"></script>
+        <script src="<%=Url.JS_PASS%>"></script>
     </body>
 </html>
 

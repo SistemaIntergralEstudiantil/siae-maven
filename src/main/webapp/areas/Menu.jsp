@@ -38,7 +38,7 @@
         <div class="description-p" style="margin-top: 4rem">
             <p>Las áreas de apoyo buscan fortalecer los procesos de formación de los estudiantes vulnerables a través de la implementación de un programa.</p>
         </div>
-        <form action="/Asesorias" method="POST" >
+        <form action="Asesorias" method="POST" >
         <div class="content-data_row" >
             <select name="servicio" class="data_d">
                 <option value="" disabled selected>Áreas</option>

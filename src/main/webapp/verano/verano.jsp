@@ -4,20 +4,21 @@
     Author     : danielhernandezreyes
 --%>
 
-<%@page import="mx.com.siae.modelo.Session"%>
-<%@page import="mx.com.siae.modelo.beans.Asignatura"%>
+<%@page import="java.nio.charset.Charset"%>
+<%@page import="com.isic.siae.modelo.beans.Asignatura"%>
+<%@page import="com.isic.siae.modelo.Session"%>
+<%@page import="com.isic.siae.conector.Url"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="mx.com.siae.conector.config.Url"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"/>
+        <meta name="description" content="<%=Url.DESCRIPTION.getBytes(Charset.forName("ISO-8859-1"))%>"/>
         <title>Verano</title>
-        <link rel="shortcut icon" href="/SIAE/resource/images/logo_SIAE.png" />
-        <link rel="stylesheet" href="/SIAE/resource/css/Style-General.css"/>
-        <link rel="stylesheet" href="/SIAE/resource/css/Style-Verano.css"/>
+        <link rel="shortcut icon" href="<%=Url.IMG_LOGO_SIAE%>" />
+        <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_VERANO%>"/>
     </head>
     <body>
     <%  HttpSession sesion = request.getSession();
@@ -34,7 +35,7 @@
     <ul class="content-G content">
         <li><a class="content-item-G content-item selec-none " href="#dia"></a></li>
         <li><a class="content-item-G content-item selec-none info" href="#dia">Solicitud de verano</a></li>
-        <li><img class="content-item-G content-item content-img" src="/SIAE/resource/images/logo_SIAE.png" width="80" height="80"/></li>
+        <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
     </ul>
     </nav>
     </header>

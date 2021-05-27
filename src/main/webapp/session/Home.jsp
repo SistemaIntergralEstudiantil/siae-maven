@@ -82,7 +82,6 @@
                 <li><a href="http://conect.itsoeh.edu.mx/mix_21_alu" target="_blank"  class="link fas fa-laptop-house"></a></li>
             </ul>
 	</div>
-        
         <script src="https://kit.fontawesome.com/1703782d49.js" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -106,6 +106,6 @@
         <div class="content-data_row" >
             <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>" >Menú principal</a>
         </div>
-        <script src="/SIAE/resource/js/Script-Asignaturas.js"></script>
+        <script src="<%=Url.JS_ASIGNATURAS%>"></script>
     </body>
 </html>

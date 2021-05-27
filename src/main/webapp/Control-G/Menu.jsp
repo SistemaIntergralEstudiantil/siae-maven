@@ -120,6 +120,6 @@
             </ul>
         </nav>
         </footer>
-        <script src="/siae/resource/js/Script-Control.js"></script>
+        <script src="<%=Url.JS_CONTROL%>"></script>
     </body>
 </html>

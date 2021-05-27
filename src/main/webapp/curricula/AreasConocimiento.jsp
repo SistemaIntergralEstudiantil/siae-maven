@@ -104,6 +104,6 @@
                     </tbody>
                 </table>
         </div>
-                    <script src="/siae/resource/js/Script-Asignaturas.js"></script>
+        <script src="<%=Url.JS_ASIGNATURAS%>"></script>
     </body>
 </html>

@@ -101,6 +101,6 @@
                 <input class="input-submit" type="submit" value="Realizar actualización">
             </form>
         </div>
-        <script src="/siae/resource/js/Script-Cursos.js"></script>
+        <script src="<%=Url.JS_CURSOS%>"></script>
     </body>
 </html>

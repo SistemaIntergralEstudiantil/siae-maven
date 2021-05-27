@@ -5,8 +5,6 @@
  */
 package com.isic.siae.conector;
 
-import java.nio.charset.Charset;
-
 /**
  * Esta clase representa las direcciones de los JSP.
  * @version 09/05/2021C
