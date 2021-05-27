@@ -30,7 +30,7 @@ public class Url {
      * Dirección de absulta de la página de Error.
      * <h3>/SIAE/error/error.jsp</h3>
      */
-    public static String URL_ERROR = "error/error.jsp";
+    public static String URL_ERROR = "/siae/error/error.jsp";
     /**
      * Dirección de absulta de la página de Cursos.
      * <h3>/SIAE/Docente/Cursos.jsp</h3>
