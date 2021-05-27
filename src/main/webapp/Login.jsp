@@ -4,6 +4,7 @@
     Author     : sandr
 --%>
 
+<%@page import="com.isic.siae.conector.Url"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es" >
@@ -12,19 +13,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"/>
         <title>Login </title>
-        <link rel="shortcut icon" href="resource/images/logo_SIAE.png" />
-        <link rel="stylesheet" href="resource/css/Style-General.css"/>
-        <link rel="stylesheet" href="resource/css/Style-Login.css"/>
+        <link rel="shortcut icon" href="<%=Url.IMG_LOGO_SIAE%>" />
+        <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_LOGIN%>"/>
     </head>
     <body style="background-image: url(resource/images/Login.png);background-size: 100% 150%;">
         <table width="100%">
             <tr>
-                <td align="center" width="33%"><img src="resource/images/Logo-TecNM.png" height="80" width="180"></td>
-                <td align="center" width="33%"><img src="resource/images/logo_tec.png" height="100" width="190"></td>
-                <td align="center" width="33%"><img src="resource/images/logo_ISIC.png" height="80" width="150"></td>
+                <td align="center" width="33%"><img src="<%=Url.IMG_LOGO_TECNM%>" height="80" width="180"></td>
+                <td align="center" width="33%"><img src="<%=Url.IMG_LOGO_TEC%>" height="100" width="190"></td>
+                <td align="center" width="33%"><img src="<%=Url.IMG_LOGO_ISIC%>" height="80" width="150"></td>
             </tr>
         </table>
-        <p align="center"><img src="resource/images/logo_SIAE.png" height="180" width="180"></p>
+        <p align="center"><img src="<%=Url.IMG_LOGO_SIAE%>" height="180" width="180"></p>
         <div class="content-form">
         <center>
             <form action="Login" method="POST">
@@ -45,7 +46,7 @@
         </center>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="resource/js/Script-Login.js"></script>
-        <script src="resource/js/Script-pass.js"></script>
+        <script src="<%=Url.JS_LOGIN%>"></script>
+        <script src="<%=Url.JS_PASS%>"></script>
     </body>
 </html>
