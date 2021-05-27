@@ -12,20 +12,21 @@ package com.isic.siae.conector;
  */
 public class Url {
     /**
-     * Dirección de absulta de la página Home.
-     * <h3>/SIAE/session/Home.jsp</h3>
+     * Directorio Raiz
      */
-    public static String URL_HOME = "session/Home.jsp";
+    private static final String URL_BASE = "https://app-siae.herokuapp.com/";
+    /**
+     * Dirección de absulta de la página Home.
+     */
+    public static String URL_HOME = URL_BASE + "session/Home.jsp";
     /**
      * Dirección de absulta de la página Login.
-     * <h3>/SIAE/Login.jsp</h3>
      */
-    public static String URL_LOGIN = "/siae/Login.jsp";
+    public static String URL_LOGIN = URL_BASE + "Login.jsp";
     /**
      * Dirección de absulta de la página Ajustes.
-     * <h3>/SIAE/Ajustes.jsp</h3>
      */
-    public static String URL_AJUSTES = "/siae/Ajustes.jsp";
+    public static String URL_AJUSTES = URL_BASE + "Ajustes.jsp";
     /**
      * Dirección de absulta de la página de Error.
      * <h3>/SIAE/error/error.jsp</h3>
