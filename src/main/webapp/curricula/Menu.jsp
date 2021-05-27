@@ -15,9 +15,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<%=Url.DESCRIPTION.getBytes(Charset.forName("ISO-8859-1")%>"/>
         <title>Seguimiento Académico</title>
-        <link rel="shortcut icon" href="/siae/resource/images/logo_SIAE.png"/>
-        <link rel="stylesheet" href="/siae/resource/css/Style-General.css"/>
-        <link rel="stylesheet" href="/siae/resource/css/Style-Curricula.css"/>
+        <link rel="shortcut icon" href="<%=Url.IMG_LOGO_SIAE%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_CURRICULA%>"/>
         
     </head>
     <body style="background-image: url(/siae/resource/images/menuPrincipal.png);background-size: 100% 150%;background-repeat: no-repeat">

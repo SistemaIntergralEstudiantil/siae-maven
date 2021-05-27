@@ -17,9 +17,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<%=Url.DESCRIPTION.getBytes(Charset.forName("ISO-8859-1")%>"/>
         <title>Ajustes</title>
-        <link rel="shortcut icon" href="/SIAE/resource/images/logo_SIAE.png" />
-        <link rel="stylesheet" href="/SIAE/resource/css/Style-General.css"/>
-        <link rel="stylesheet" href="/SIAE/resource/css/Style-Ajustes.css"/>
+        <link rel="shortcut icon" href="<%=Url.IMG_LOGO_SIAE%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
+        <link rel="stylesheet" href="<%=Url.CSS_AJUSTES%>"/>
     </head>
     <body style="background-image: url(/SIAE/resource/images/menuPrincipal.png);background-size: 100% 130%;background-repeat: no-repeat">
         <%  HttpSession sesion = request.getSession();
