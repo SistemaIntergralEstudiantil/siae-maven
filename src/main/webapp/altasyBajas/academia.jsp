@@ -4,6 +4,7 @@
     Author     : danielhernandezreyes
 --%>
 
+<%@page import="java.nio.charset.Charset"%>
 <%@page import="com.isic.siae.conector.Url"%>
 <%@page import="com.isic.siae.modelo.beans.Asignatura"%>
 <%@page import="com.isic.siae.modelo.Session"%>
@@ -14,7 +15,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"/>
+        <meta name="description" content="<%=Url.DESCRIPTION.getBytes(Charset.forName("ISO-8859-1")%>"/>
         <title>Seguimiento</title>
         <link rel="shortcut icon" href="/siae/resource/images/logo_SIAE.png" />
         <link rel="stylesheet" href="/siae/resource/css/Style-General.css"/>

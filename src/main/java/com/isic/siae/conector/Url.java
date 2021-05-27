@@ -150,8 +150,5 @@ public class Url {
     /**
      * Descripción del sitio.
      */
-    public static final String DESCRIPTION = 
-            new String("SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"
-                    .getBytes(Charset.forName("ISO-8859-1"))
-            );
+    public static final String DESCRIPTION = "SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto";
 }

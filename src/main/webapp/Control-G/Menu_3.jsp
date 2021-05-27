@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="java.nio.charset.Charset"%>
 <%@page import="com.isic.siae.conector.Url"%>
 <%@page import="com.isic.siae.modelo.beans.ReporteAlumno"%>
 <%@page import="java.util.ArrayList"%>
@@ -14,7 +15,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="SIAE permite a los instructores y estudiantes consultar información sobre los diferentes servicios del instituto"/>
+        <meta name="description" content="<%=Url.DESCRIPTION.getBytes(Charset.forName("ISO-8859-1")%>"/>
         <title>Menu de control carga academica</title>
         <link rel="shortcut icon" href="/siae/resource/images/logo_SIAE.png" />
         <link rel="stylesheet" href="/siae/resource/css/Style-General.css"/>
