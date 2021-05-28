@@ -81,7 +81,7 @@ public class ControlAltaBaja extends HttpServlet {
                 request.setAttribute("status-v", statu?"A":"D");
                 request.setAttribute("lista-a", list_a);
                 request.setAttribute("lista-b", list_b);
-                request.getRequestDispatcher(Url.URL_CONTROLG_MENU_3).forward(request, response);
+                request.getRequestDispatcher("Control-G/Menu_3.jsp").forward(request, response);
                 // Redirección a la pagina de control academica.
             } catch (ClassNotFoundException ex) {
                 sesion.setAttribute("user", sec);
