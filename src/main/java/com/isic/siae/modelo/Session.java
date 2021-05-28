@@ -5,6 +5,7 @@
  */
 package com.isic.siae.modelo;
 
+import com.isic.siae.conector.Url;
 import com.isic.siae.modelo.beans.Usuarios;
 
 /**
@@ -125,6 +126,6 @@ public class Session {
     public void setTypeSessionNull(int type ) {
         this.errorMsj = "No a iniciado sesión ("+type+"):";
         this.errorType = "Cuenta no encontrada";
-        this.errorUrl = "/SIAE/Login.jsp";
+        this.errorUrl = Url.URL_LOGIN;
     }
 }

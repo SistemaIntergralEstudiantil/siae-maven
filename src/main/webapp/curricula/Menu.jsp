@@ -18,18 +18,16 @@
         <link rel="shortcut icon" href="<%=Url.IMG_LOGO_SIAE%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_GENERAL%>"/>
         <link rel="stylesheet" href="<%=Url.CSS_CURRICULA%>"/>
-        
     </head>
     <body style="background-image: url(<%=Url.IMG_MENU_PRINCIPAL%>);background-size: 100% 150%;background-repeat: no-repeat">
         <%
-            
             HttpSession sesion = request.getSession();
             Session sec = (Session) sesion.getAttribute("user");
             if(sec == null){
                 sec = new Session();
                 sec.setTypeSessionNull(1);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher("/error/error.jsp").forward(request, response);   
+                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);   
             }
         %>
         <header>
@@ -42,7 +40,7 @@
                 </ul>
             </nav>
         </header>
-        <form action="AsignaturaServ" method="POST" >
+        <form action="<%=Url.SER_ASIGNATURA_SERV%>" method="POST" >
             <div class="content-data_row" >
                 <select name="servicio" class="data_d">
                     <option value="" disabled selected>Seleccionar ...</option>

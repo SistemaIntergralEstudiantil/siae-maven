@@ -36,15 +36,15 @@
         <header>
         <nav>
             <ul class="content-G content">
-                <li><a class="content-item-G content-item" href="Control?clave=course">Control Cursos</a></li>
-                <li><a class="content-item-G content-item" href="CambiosCA?clave=asesor">Control Asesorias</a></li>
+                <li><a class="content-item-G content-item" href="<%=Url.SER_CONTROL%>?clave=course">Control Cursos</a></li>
+                <li><a class="content-item-G content-item" href="<%=Url.SER_CAMBIOS_CA%>?clave=asesor">Control Asesorias</a></li>
                 <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
             </ul>
         </nav>
         </header>
         <div class="content-center">
         <div class="content-left">
-            <form action="CambiosCA" method="POST" onsubmit="return validarForm2();" >
+            <form action="<%=Url.SER_CAMBIOS_CA%>" method="POST" onsubmit="return validarForm2();" >
                 <div><label>URL: <input class="input-number" id="url" type="url" name="url" maxlength="200" /></label></div>
                 <div><label>Dia: <select class="item-selec" id="dia" name="dia">
                     <option value="0" disabled selected>Dia ...</option>
@@ -97,7 +97,7 @@
                     <th><a href="<%=r.getUrl() %>" target="_blank" style="text-decoration: none;" >Enlace</a></th>
                     <th><%=r.getDia() %></th>
                     <th><%=r.getHorario() %></th>
-                    <th><form action="CambiosCA" method="POST" >
+                    <th><form action="<%=Url.SER_CAMBIOS_CA%>" method="POST" >
                         <input type="hidden" name="clave" value="change-A">
                         <input type="hidden" name="idAsesoria" value="<%=r.getIdAsesoria() %>">
                         <input type="hidden" name="estado" value="<%=r.getEstado() %>">

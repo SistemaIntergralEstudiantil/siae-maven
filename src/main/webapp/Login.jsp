@@ -29,7 +29,7 @@
         <p align="center"><img src="<%=Url.IMG_LOGO_SIAE%>" height="180" width="180"></p>
         <div class="content-form">
         <center>
-            <form action="Login" method="POST">
+            <form action="<%=Url.SER_LOGIN%>" method="POST">
                 <div>
                     <label for="user" class="lbl-user">Matricula o Número de control</label>
                     <input id="user" type="text" name="idUsuario"/>

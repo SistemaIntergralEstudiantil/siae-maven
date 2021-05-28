@@ -28,7 +28,7 @@
                 sec = new Session();
                 sec.setTypeSessionNull(1);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher("/error/error.jsp").forward(request, response); } %>
+                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response); } %>
     <header>
     <nav>
     <ul class="content-G content">
@@ -68,14 +68,14 @@
             <th><%=s.getCredito() %></th>
             <th><%=s.getMatricula() %></th>
             <th><%=s.getAlumno() %></th>
-            <th><form action="ControlAltaBaja" method="POST" >
+            <th><form action="<%=Url.SER_CONTROL_ALTA_BAJA%>" method="POST" >
                 <input type="hidden" name="clave" value="registro-a">
                 <input type="hidden" name="idCurso" value="<%=s.getIdCurso()%>">
                 <input type="hidden" name="matricula" value="<%=s.getMatricula()%>">
                 <input type="hidden" name="estado" value="A">
                 <input class="input-submit-table input-T-E" type="submit" value="Alta">
                 </form></th>
-            <th><form action="ControlAltaBaja" method="POST" >
+            <th><form action="<%=Url.SER_CONTROL_ALTA_BAJA%>" method="POST" >
                 <input type="hidden" name="clave" value="registro-a">
                 <input type="hidden" name="idCurso" value="<%=s.getIdCurso()%>">
                 <input type="hidden" name="matricula" value="<%=s.getMatricula()%>">
@@ -116,14 +116,14 @@
             <th><%=s.getCredito() %></th>
             <th><%=s.getMatricula() %></th>
             <th><%=s.getAlumno() %></th>
-            <th><form action="ControlAltaBaja" method="POST" >
+            <th><form action="<%=Url.SER_CONTROL_ALTA_BAJA%>" method="POST" >
                 <input type="hidden" name="clave" value="registro-b">
                 <input type="hidden" name="idCurso" value="<%=s.getIdCurso()%>">
                 <input type="hidden" name="matricula" value="<%=s.getMatricula()%>">
                 <input type="hidden" name="estado" value="A">
                 <input class="input-submit-table input-T-E" type="submit" value="Baja">
                 </form></th>
-            <th><form action="ControlAltaBaja" method="POST" >
+            <th><form action="<%=Url.SER_CONTROL_ALTA_BAJA%>" method="POST" >
                 <input type="hidden" name="clave" value="registro-b">
                 <input type="hidden" name="idCurso" value="<%=s.getIdCurso()%>">
                 <input type="hidden" name="matricula" value="<%=s.getMatricula()%>">
@@ -134,18 +134,18 @@
         </tr><% } } %>
     </tbody>
     </table>
-    <form method="POST" action="ControlAltaBaja">
+    <form method="POST" action="<%=Url.SER_CONTROL_ALTA_BAJA%>">
         <input type="hidden" name="clave" value="consultar">
         <input class="input-submit input-submit-ft" type="submit" value="Actualizar datos">
     </form>
     </div>
-    <form method="POST" action="ControlAltaBaja">
+    <form method="POST" action="<%=Url.SER_CONTROL_ALTA_BAJA%>">
         <input type="hidden" name="clave" value="verano">
         <%String l = (String) request.getAttribute("status-v");%>
         <input type="hidden" name="status-v" value="<%=l.equals("A")?"D":"A"%>">
         <input class="input-submit input-submit-f" type="submit" value="<%=l.equals("A")?"Desabilitar":"Habilitar"%> solicitudes de verano">
     </form>
-    <form method="POST" action="ReporteAsignatura">
+    <form method="POST" action="<%=Url.SER_REPORTE_ASIGNATURA%>">
         <input type="hidden" name="clave" value="verano">
         <input class="input-submit input-submit-f" type="submit" value="Reporte de solicitudes de verano">
     </form>

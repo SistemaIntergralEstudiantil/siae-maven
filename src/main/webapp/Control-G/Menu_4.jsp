@@ -27,7 +27,7 @@
             sec = new Session();
             sec.setTypeSessionNull(1);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher("/error/error.jsp").forward(request, response); } %>
+            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response); } %>
     <header>
     <nav>
     <ul class="content-G content">
@@ -63,6 +63,6 @@
     </table>
     </div>
     <div class="content-data_row" >
-        <a class="item-G-A-Selec content-a" href="ControlAltaBaja?clave=consulta">Ménu carga academica</a></div>
+        <a class="item-G-A-Selec content-a" href="<%=Url.SER_CONTROL_ALTA_BAJA%>?clave=consulta">Ménu carga academica</a></div>
     </body>
 </html>

@@ -15,6 +15,17 @@ public class Url {
      * Directorio Raiz.
      */
     private static final String URL_BASE = "https://app-siae.herokuapp.com/";
+    public static String SER_REPORTE_ASIGNATURA = URL_BASE + "ReporteAsignatura";
+    public static String SER_VERANO = URL_BASE + "Verano";
+    public static String SER_CONTROL_CARGA_ACADEMICA = URL_BASE + "ControlCargaAcademica";
+    public static String SER_CONTROL = URL_BASE + "Control";
+    public static String SER_CONTROL_ALTA_BAJA = URL_BASE + "ControlAltaBaja";
+    public static String SER_CAMBIOS_CA = URL_BASE + "CambiosCA";
+    public static String SER_DOCENTE = URL_BASE + "Docente";
+    public static String SER_LOGIN = URL_BASE + "Login";
+    public static String SER_CAMBIAR_DATOS = URL_BASE + "CambiarDatos";
+    public static String SER_ASIGNATURA_SERV = URL_BASE + "AsignaturaServ";
+    public static String SER_ASESORIAS = URL_BASE + "Asesorias";
     /**
      * Dirección de absulta de la página Home.
      */

@@ -40,26 +40,25 @@
     </nav>
     </header>
     <div class="description-p"><p>Aquí tendrás la oportunidad de solicitar dos materias para el curso de verano</p></div>
-    <form>
-    <div class="item-option" ><label>Asignatura 1: <select class="item-selec" name="idAsignatura_1">
-            <option value="0" disabled selected>Seleccionar ...</option>
-    <%  if(sec!=null) {
-            ArrayList<Asignatura> la = (ArrayList<Asignatura>) request.getAttribute("lista");
-            for(Asignatura a : la) { %> 
-                <option value="<%=a.getIdAsignatura() %>"><%=a.getNombre() %></option> 
-    <% } } %></select></label>
-    </div>
-    <div class="item-option" ><label>Asignatura 2: <select class="item-selec" name="idAsignatura_2">
-            <option value="0" disabled selected>Seleccionar ...</option>
-    <%  if(sec!=null) {
-            ArrayList<Asignatura> la = (ArrayList<Asignatura>) request.getAttribute("lista");
-            for(Asignatura a : la) { %> 
-                <option value="<%=a.getIdAsignatura() %>"><%=a.getNombre() %></option> 
-    <% } } %></select></label>
-    </div>
-    <input type="hidden" name="clave" value="registrar">
-    
-    <input class="input-submit" type="submit" value="Solicitar">
+    <form method="POST" action="<%=Url.SER_VERANO %>">
+        <div class="item-option" ><label>Asignatura 1: <select class="item-selec" name="idAsignatura_1">
+                <option value="0" disabled selected>Seleccionar ...</option>
+        <%  if(sec!=null) {
+                ArrayList<Asignatura> la = (ArrayList<Asignatura>) request.getAttribute("lista");
+                for(Asignatura a : la) { %> 
+                    <option value="<%=a.getIdAsignatura() %>"><%=a.getNombre() %></option> 
+        <% } } %></select></label>
+        </div>
+        <div class="item-option" ><label>Asignatura 2: <select class="item-selec" name="idAsignatura_2">
+                <option value="0" disabled selected>Seleccionar ...</option>
+        <%  if(sec!=null) {
+                ArrayList<Asignatura> la = (ArrayList<Asignatura>) request.getAttribute("lista");
+                for(Asignatura a : la) { %> 
+                    <option value="<%=a.getIdAsignatura() %>"><%=a.getNombre() %></option> 
+        <% } } %></select></label>
+        </div>
+        <input type="hidden" name="clave" value="registrar">
+        <input class="input-submit" type="submit" value="Solicitar">
     </form>
     <div class="content-data_row" >
         <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>">Ménu principal</a></div>

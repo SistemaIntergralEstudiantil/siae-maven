@@ -28,7 +28,7 @@
                 sec = new Session();
                 sec.setTypeSessionNull(1);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher("/error/error.jsp").forward(request, response);   
+                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);   
             } %>
         <header>
         <nav>
@@ -40,7 +40,7 @@
         </header>
         <div class="description-p"><p>Aquí tendrás la oportunidad de solicitar tus altas y bajas de materias</p></div>
         <div class="content-table" >
-        <form method="POST" action="ControlCargaAcademica">
+        <form method="POST" action="<%=Url.SER_CONTROL_CARGA_ACADEMICA%>">
             <table class="table">
             <caption class="description-tile" >Lista de asignaturas disponibles para cargar</caption>
             <thead>
@@ -89,7 +89,7 @@
         </form>
         </div>
         <div class="content-table" >
-        <form method="POST" action="ControlCargaAcademica">
+        <form method="POST" action="<%=Url.SER_CONTROL_CARGA_ACADEMICA%>">
         <table class="table" >
         <caption class="description-tile" >Lista de las asignaturas que han sido cargadas</caption>
         <thead>
@@ -133,7 +133,7 @@
         </form>
         </div>
         <div class="content-data_row" >
-            <a class="item-G-A-Selec content-a" href="ControlCargaAcademica?clave=seg-ac">Avance de curricula</a></div>
+            <a class="item-G-A-Selec content-a" href="<%=Url.SER_CONTROL_CARGA_ACADEMICA%>?clave=seg-ac">Avance de curricula</a></div>
         <div class="content-data_row" >
             <a class="item-G-A-Selec content-a" href="<%=Url.URL_HOME%>">Ménu principal</a></div>
     </body>

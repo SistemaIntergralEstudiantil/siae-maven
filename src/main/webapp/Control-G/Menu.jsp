@@ -24,8 +24,7 @@
     </head>
     <body>
         <% HttpSession sesion = request.getSession();
-            Session sec = (Session) sesion.getAttribute("user");
-            
+            Session sec = (Session) sesion.getAttribute("user");      
             if(sec == null){
                 sec = new Session();
                 sec.setTypeSessionNull(1);
@@ -36,15 +35,15 @@
         <header>
             <nav>
                 <ul class="content-G content">
-                    <li><a class="content-item-G content-item" href="Control?clave=course">Control Cursos</a></li>
-                    <li><a class="content-item-G content-item" href="CambiosCA?clave=asesor">Control Asesorias</a></li>
+                    <li><a class="content-item-G content-item" href="<%=Url.SER_CONTROL%>?clave=course">Control Cursos</a></li>
+                    <li><a class="content-item-G content-item" href="<%=Url.SER_CAMBIOS_CA%>?clave=asesor">Control Asesorias</a></li>
                     <li><img class="content-item-G content-item content-img" src="<%=Url.IMG_LOGO_SIAE%>" width="80" height="80"/></li>
                 </ul>
             </nav>
         </header>
         <div class="content-center">
         <div class="content-left">
-            <form action="Control" method="POST" onsubmit="return validarForm();" >
+            <form action="<%=Url.SER_CONTROL%>" method="POST" onsubmit="return validarForm();" >
                 <div class="item-option" ><label>Id Curso: <input class="input-number" type="number" name="idCurso" value="1" id="idCurso" min="1"></label></div>
                 <div class="item-option" ><label>Habilitado: <input id="estado" type="checkbox" name="estado" value="E" checked="checked" /></label></div>
                 <div class="item-option" ><label>Curso de ordinal: <input id="ordinario" type="radio" name="tipo" value="O" checked="checked" /></label></div>
@@ -89,7 +88,7 @@
                         for(ReporteCurso r : l) { %>
                 <tr><th><%=r.getIdCurso() %></th>
                     <th><%=r.getTipo() %></th>
-                    <th><form action="Control" method="POST" >
+                    <th><form action="<%=Url.SER_CONTROL%>" method="POST" >
                         <input type="hidden" name="clave" value="change-c">
                         <input type="hidden" name="idCurso" value="<%=r.getIdCurso()%>">
                         <input type="hidden" name="estado" value="<%=r.getEstado()%>">
@@ -98,7 +97,7 @@
                     <th><%=r.getCupo() %></th>
                     <th><%=r.getAsignatura() %></th>
                     <th><%=r.getResponsable() %></th>
-                    <th><form action="Control" method="POST" onsubmit="return <%=(r.getEstado().equals("E"))?true:false %>;" >
+                    <th><form action="<%=Url.SER_CONTROL%>" method="POST" onsubmit="return <%=(r.getEstado().equals("E"))?true:false %>;" >
                         <input type="hidden" name="clave" value="session-c">
                         <input type="hidden" name="idCurso" value="<%=r.getIdCurso() %>">
                         <input type="hidden" name="responsable" value="<%=r.getResponsable() %>">

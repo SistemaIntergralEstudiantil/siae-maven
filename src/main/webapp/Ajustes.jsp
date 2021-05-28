@@ -40,7 +40,7 @@
         </ul>
         </nav>
         </header>
-        <form action="CambiarDatos" method="POST" enctype="multipart/form-data" >
+        <form action="<%=Url.SER_CAMBIAR_DATOS%>" method="POST" enctype="multipart/form-data" >
             <div class = "profile-pic-div">
                 <% if(user != null) { 
                     if(user.aFoto != null) { %>
@@ -64,7 +64,7 @@
             <input type="hidden" name="clave" value="change-foto"/>
         </form>
         
-        <form action="CambiarDatos" method="POST" onsubmit="return validarForm();" >
+        <form action="<%=Url.SER_CAMBIAR_DATOS%>" method="POST" onsubmit="return validarForm();" >
         <dl class="content-data" >
             <div class="content-data_row">
                 <dt class="data_dt data_d" >Contraseña actual:</dt>

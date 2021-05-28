@@ -80,8 +80,7 @@
             </table>
         </div>
         <div class="content-table" >
-            
-            <form action="Docente" method="POST">
+            <form action="<%=Url.SER_DOCENTE%>" method="POST">
                 <dl class="two">
                     <strong><dt>Matricula: </dt></strong>
                 <dt id="sel_matricula" ></dt>

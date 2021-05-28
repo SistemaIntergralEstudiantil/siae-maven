@@ -41,7 +41,7 @@
     </header>
     <div class="content-center">
         <div class="content-left">
-            <form action="Control" method="POST" onsubmit="return validarForm3();" >
+            <form action="<%=Url.SER_CONTROL%>" method="POST" onsubmit="return validarForm3();" >
                 <% String idCurso = (String)request.getAttribute("idCurso"); %>
                 <div class="item-option" ><label>Id Curso:</label><label><%=(idCurso==null)?"": idCurso %></label></div>
                 <div class="item-option" ><label>Dia:<select class="item-selec" id="dia" name="dia">
@@ -79,7 +79,7 @@
                     <th><%=s.getDia() %></th>
                     <th><%=s.getHora_inicio() %></th>
                     <th><%=s.getHora_fin() %></th>
-                    <th><form action="Control" method="POST" >
+                    <th><form action="<%=Url.SER_CONTROL%>" method="POST" >
                         <input type="hidden" name="clave" value="session-delete">
                         <input type="hidden" name="idCurso" value="<%=(idCurso==null)?"":idCurso %>">
                         <input type="hidden" name="responsable" value="<%=(responsable==null)?"":responsable %>">
@@ -95,7 +95,7 @@
         <footer class="footer">
         <nav>
             <ul class="content-footer">
-                <li><a class="item-footer" href="Control?clave=course">Menu cursos</a></li>
+                <li><a class="item-footer" href="<%=Url.SER_CONTROL%>?clave=course">Menu cursos</a></li>
                 <li><%String mensaje = (String) request.getAttribute("msj");%>
                     <label class="item-mensaje"><%=(mensaje==null)?"-":mensaje %></label>
                 </li>

@@ -73,7 +73,7 @@ public class Verano extends HttpServlet {
                     // Redireccionar la petición a la interfaz
                     request.getRequestDispatcher(Url.URL_VERANO).forward(request, response);
                 } else {
-                    request.getRequestDispatcher("session/Home.jsp").forward(request, response);
+                    request.getRequestDispatcher(Url.URL_HOME).forward(request, response);
                 }
             }
         } catch (ClassNotFoundException ex) {
