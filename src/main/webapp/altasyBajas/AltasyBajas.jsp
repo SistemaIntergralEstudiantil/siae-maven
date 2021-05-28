@@ -76,7 +76,7 @@
                 <th><%=estado%></th>
                 <th><%=rc.getIdAsignatura()%></th>
                 <th><%=rc.getSemestre()%></th>
-                <th><%=a%></th>
+                <th><%=rc.getAsignatura()%></th>
                 <th><%=cr%></th>
                 <th><%=rc.getCupo()%></th>
                 <th><%=rc.getTipo()%></th>
