@@ -57,13 +57,13 @@ public class ReporteAsignatura extends HttpServlet {
                 if(clave==null) {
                     ArrayList<ReporteAsig> list = crl.reporte();
                     request.setAttribute("lista", list);
-                    request.getRequestDispatcher(Url.URL_ASIGNATURAS).forward(request, response);
+                    request.getRequestDispatcher("Asignaturas.jsp").forward(request, response);
                     // Redirección a la pagina de asignaturas.
                 } else {
                     if(clave.equals("verano")) {
                         ArrayList<Asignatura> lista = crl.reporteAsignaturaVerano();
                         request.setAttribute("lista", lista);
-                        request.getRequestDispatcher(Url.URL_CONTROLG_MENU_4).forward(request, response);
+                        request.getRequestDispatcher("Control-G/Menu_4.jsp").forward(request, response);
                     }
                 }
             } catch (ClassNotFoundException ex) {
