@@ -57,7 +57,7 @@ public class Login extends HttpServlet {
                     if(user != null){ // Todos lo datos obtenidos.
                         sec.setUser(user);
                         sesion.setAttribute("user", sec);
-                        response.sendRedirect("/error/error.jsp");
+                        response.sendRedirect("session/Home.jsp");
                     } else
                         throw new Exception("Las credenciales no se encontrarón.");
                     break;
