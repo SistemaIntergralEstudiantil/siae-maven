@@ -48,7 +48,7 @@ public class ReporteAsignatura extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("/error/error.jsp").forward(request, response);
             // Redireccionamiento a la pagina de error.
         }else{
             try { // Operaciones a la BD.
@@ -63,7 +63,7 @@ public class ReporteAsignatura extends HttpServlet {
                     if(clave.equals("verano")) {
                         ArrayList<Asignatura> lista = crl.reporteAsignaturaVerano();
                         request.setAttribute("lista", lista);
-                        request.getRequestDispatcher("Control-G/Menu_4.jsp").forward(request, response);
+                        request.getRequestDispatcher("/Control-G/Menu_4.jsp").forward(request, response);
                     }
                 }
             } catch (ClassNotFoundException ex) {

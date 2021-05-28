@@ -43,7 +43,7 @@ public class ControlAltaBaja extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("/error/error.jsp").forward(request, response);
             // Redireccionamiento a la pagina de error.
         }else{
             try { // Operaciones a la BD.
@@ -81,7 +81,7 @@ public class ControlAltaBaja extends HttpServlet {
                 request.setAttribute("status-v", statu?"A":"D");
                 request.setAttribute("lista-a", list_a);
                 request.setAttribute("lista-b", list_b);
-                request.getRequestDispatcher("Control-G/Menu_3.jsp").forward(request, response);
+                request.getRequestDispatcher("/Control-G/Menu_3.jsp").forward(request, response);
                 // Redirección a la pagina de control academica.
             } catch (ClassNotFoundException ex) {
                 sesion.setAttribute("user", sec);

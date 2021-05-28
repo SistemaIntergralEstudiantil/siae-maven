@@ -61,7 +61,7 @@ public class Control extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("/error/error.jsp").forward(request, response);
             // Redireccionamiento a la pagina de error.
         }else{
             try {
@@ -111,7 +111,7 @@ public class Control extends HttpServlet {
                     request.setAttribute("lista-D", consultarD());
                     request.setAttribute("type", "Curso");
                     // Redireccionar a la interfaz
-                    request.getRequestDispatcher(Url.URL_CONTROLG_MENU).forward(request, response);
+                    request.getRequestDispatcher("/Control-G/Menu.jsp").forward(request, response);
                 }
                 // Control de sesion
                 if(clave.equals("session-c") || clave.equals("session-add") || clave.equals("session-delete")) {
@@ -157,7 +157,7 @@ public class Control extends HttpServlet {
                     request.setAttribute("asignatura", asignatura);
                     request.setAttribute("responsable", responsable);
                     request.setAttribute("lista-S", lista);
-                    request.getRequestDispatcher(Url.URL_CONTROLG_SESIONES).forward(request, response);
+                    request.getRequestDispatcher("/Control-G/Sesiones.jsp").forward(request, response);
                 }
                 
             } catch (ClassNotFoundException ex) {

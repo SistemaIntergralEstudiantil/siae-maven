@@ -43,25 +43,27 @@ public class AsignaturaServ extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("error/error.jsp").forward(request, response);
         
         }else{
             try {
                 String servicio = request.getParameter("servicio");
                 if(servicio == null){
-                    response.sendRedirect(Url.URL_CURRICULA_MENU);
+                    request.getRequestDispatcher("curricula/Menu.jsp").forward(request, response);
+                    //response.sendRedirect("curricula/Menu.jsp");
                     // Redirecciona a la misma pagina
                 }else{
                     if(servicio.equals("AC")){ // Control areas de conocimiento
                         AsignaturaDAO crl = new AsignaturaDAO();
                         ArrayList<Asignatura> list = crl.reporteAsignatura();
                         request.setAttribute("lista", list);
-                        request.getRequestDispatcher(Url.URL_CURRICULA_AREAS).forward(request, response);
+                        request.getRequestDispatcher("curricula/AreasConocimiento.jsp").forward(request, response);
                     }else{
                         if(servicio.equals("TE")){ // Control tiempo de estudio
-                            request.getRequestDispatcher(Url.SER_CONTROL_CARGA_ACADEMICA+"?clave=seg-ac").forward(request, response);
+                            request.getRequestDispatcher("ControlCargaAcademica?clave=seg-ac").forward(request, response);
                         }else{
-                            response.sendRedirect(Url.URL_CURRICULA_MENU);
+                            request.getRequestDispatcher("curricula/Menu.jsp").forward(request, response);
+                            //response.sendRedirect(Url.URL_CURRICULA_MENU);
                         }
                     }
                 }

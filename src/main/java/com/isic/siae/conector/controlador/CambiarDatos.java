@@ -43,7 +43,7 @@ public class CambiarDatos extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("/error/error.jsp").forward(request, response);
             // Redireccionamiento a la pagina de error.
         } else {
             try {
@@ -69,7 +69,7 @@ public class CambiarDatos extends HttpServlet {
                     if(temp != null){ // Todos lo datos obtenidos.
                         sec.setUser(temp);
                         sesion.setAttribute("user", sec);
-                        request.getRequestDispatcher(Url.URL_HOME).forward(request, response);
+                        request.getRequestDispatcher("/session/Home.jsp").forward(request, response);
                     } else {
                         throw new Exception("Las credenciales no se encontrarón."); 
                     }
@@ -96,7 +96,7 @@ public class CambiarDatos extends HttpServlet {
                     if(temp != null){ // Todos lo datos obtenidos.
                         sec.setUser(temp);
                         sesion.setAttribute("user", sec);
-                        request.getRequestDispatcher(Url.URL_HOME).forward(request, response);
+                        request.getRequestDispatcher("/session/Home.jsp").forward(request, response);
                     } else {
                         throw new Exception("Las credenciales no se encontrarón."); 
                     }

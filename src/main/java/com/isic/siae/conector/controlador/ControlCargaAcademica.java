@@ -49,7 +49,7 @@ public class ControlCargaAcademica extends HttpServlet {
             sec = new Session();
             sec.setTypeSessionNull(0);
             sesion.setAttribute("user", sec);
-            request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+            request.getRequestDispatcher("/error/error.jsp").forward(request, response);
             // Redireccionamiento a la pagina de error.
         }else{
             try { // Operaciones a la BD.
@@ -124,13 +124,13 @@ public class ControlCargaAcademica extends HttpServlet {
                     request.setAttribute("lista-6", lista_6);
                     request.setAttribute("lista-7", lista_7);
                     request.setAttribute("lista-8", lista_8);
-                    request.getRequestDispatcher(Url.URL_ACADEMIA).forward(request, response);
+                    request.getRequestDispatcher("/altasyBajas/academia.jsp").forward(request, response);
                 } else {
                     ArrayList<ReporteCurso> list_rca = crl.reporteCursosAltas(alu.getIdUsuario());
                     ArrayList<ReporteCurso> list_rcb = crl.reporteCursosBajas(alu.getIdUsuario());
                     request.setAttribute("lista-rca", list_rca);
                     request.setAttribute("lista-rcb", list_rcb);
-                    request.getRequestDispatcher(Url.URL_ALTAS_Y_BAJAS).forward(request, response);
+                    request.getRequestDispatcher("/altasyBajas/AltasyBajas.jsp").forward(request, response);
                     // Redirección a la pagina de asignaturas.
                 }
             } catch (ClassNotFoundException ex) {

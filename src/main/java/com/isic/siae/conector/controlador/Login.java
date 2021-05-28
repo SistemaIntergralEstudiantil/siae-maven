@@ -57,13 +57,13 @@ public class Login extends HttpServlet {
                     if(user != null){ // Todos lo datos obtenidos.
                         sec.setUser(user);
                         sesion.setAttribute("user", sec);
-                        response.sendRedirect(Url.URL_HOME);
+                        response.sendRedirect("/error/error.jsp");
                     } else
                         throw new Exception("Las credenciales no se encontrarón.");
                     break;
                 case "exit":
                     cerrarSesion(request);
-                    request.getRequestDispatcher(Url.URL_LOGIN).forward(request, response);
+                    request.getRequestDispatcher("Login.jsp").forward(request, response);
                     break;
             }
         } catch (SQLException ex) {

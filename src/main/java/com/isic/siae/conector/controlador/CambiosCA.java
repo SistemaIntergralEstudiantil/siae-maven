@@ -58,7 +58,7 @@ public class CambiosCA extends HttpServlet {
                 sec = new Session();
                 sec.setTypeSessionNull(0);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+                request.getRequestDispatcher("/error/error.jsp").forward(request, response);
                 // Redireccionamiento a la pagina de error.
             } else {
 
@@ -114,7 +114,7 @@ public class CambiosCA extends HttpServlet {
                     request.setAttribute("lista-DA", consultarD());
                 }
                 // Redireccionar la petición a la interfaz
-                request.getRequestDispatcher(Url.URL_CONTROLG_MENU_2).forward(request, response);
+                request.getRequestDispatcher("/Control-G/Menu_2.jsp").forward(request, response);
             }
         } catch (ClassNotFoundException ex) {
             sesion.setAttribute("user", sec);

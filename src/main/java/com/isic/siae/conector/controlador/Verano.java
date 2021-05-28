@@ -45,7 +45,7 @@ public class Verano extends HttpServlet {
                 sec = new Session();
                 sec.setTypeSessionNull(0);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+                request.getRequestDispatcher("/error/error.jsp").forward(request, response);
                 // Redireccionamiento a la pagina de error.
             } else {
                 String clave = request.getParameter("clave");
@@ -71,9 +71,9 @@ public class Verano extends HttpServlet {
                     ArrayList<Asignatura> lista = crlA.reporteAsignaturaActivas();
                     request.setAttribute("lista", lista);
                     // Redireccionar la petición a la interfaz
-                    request.getRequestDispatcher(Url.URL_VERANO).forward(request, response);
+                    request.getRequestDispatcher("/verano/verano.jsp").forward(request, response);
                 } else {
-                    request.getRequestDispatcher(Url.URL_HOME).forward(request, response);
+                    request.getRequestDispatcher("/session/Home.jsp").forward(request, response);
                 }
             }
         } catch (ClassNotFoundException ex) {

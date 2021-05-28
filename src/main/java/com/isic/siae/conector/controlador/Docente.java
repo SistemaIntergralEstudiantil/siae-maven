@@ -51,7 +51,7 @@ public class Docente extends HttpServlet {
                 sec = new Session();
                 sec.setTypeSessionNull(0);
                 sesion.setAttribute("user", sec);
-                request.getRequestDispatcher(Url.URL_ERROR).forward(request, response);
+                request.getRequestDispatcher("/error/error.jsp").forward(request, response);
                 // Redireccionamiento a la pagina de error.
             } else {
                 String clave = request.getParameter("clave");
@@ -78,7 +78,7 @@ public class Docente extends HttpServlet {
                     ArrayList<AlumnoRepoD> list = crl.reporteAlumnoCursoD(idUsuario);
                     request.setAttribute("lista", list);
                     // Redirección a la interfaz
-                    request.getRequestDispatcher(Url.URL_DOCENTE_CURSOS).forward(request, response);
+                    request.getRequestDispatcher("/Docente/Cursos.jsp").forward(request, response);
                 }
             }
         } catch (ClassNotFoundException ex) {
