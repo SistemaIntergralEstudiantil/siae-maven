@@ -39,6 +39,10 @@ public class Url {
      */
     public static String URL_AJUSTES = URL_BASE + "Ajustes.jsp";
     /**
+     * Dirección de absulta de la página Asignaturas.
+     */
+    public static String URL_ASIGNATURAS = URL_BASE + "Asignaturas.jsp";
+    /**
      * Dirección de absulta de la página de Error.
      */
     public static String URL_ERROR = URL_BASE + "error/error.jsp";

@@ -59,7 +59,7 @@ public class AsignaturaServ extends HttpServlet {
                         request.getRequestDispatcher(Url.URL_CURRICULA_AREAS).forward(request, response);
                     }else{
                         if(servicio.equals("TE")){ // Control tiempo de estudio
-                            request.getRequestDispatcher("ControlCargaAcademica?clave=seg-ac").forward(request, response);
+                            request.getRequestDispatcher(Url.SER_CONTROL_CARGA_ACADEMICA+"?clave=seg-ac").forward(request, response);
                         }else{
                             response.sendRedirect(Url.URL_CURRICULA_MENU);
                         }
